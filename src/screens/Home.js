@@ -1,45 +1,33 @@
 import React, {useState} from 'react';
 
-import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 
-import Camera from '../components/Camera';
+import {useNavigation} from '@react-navigation/native';
+
+import VerPdf from '../components/VerPdf';
 
 const styles = StyleSheet.create({
   container: {flex: 1, alignItems: 'center', justifyContent: 'center'},
-  button: {padding: 5, borderWidth: 1, borderColor: '#ccc', margin: 5},
-  image: {height: 100, width: 100},
 });
 
-const Home = () => {
-  const [abrirCamera, setAbrirCamera] = useState(false);
-  const [fotos, setFotos] = useState([]);
+const urlPdf = 'https://bitcoin.org/files/bitcoin-paper/bitcoin_pt_br.pdf';
 
-  const adicionarFoto = uri => {
-    setAbrirCamera(false);
-    setFotos([...fotos, uri]);
-    console.log(uri);
-  };
+export default function Home() {
+  const navigation = useNavigation();
+
+  const [mostrarPdf, setMostrarPdf] = useState(false);
 
   return (
     <>
-      <Camera
-        cancelar={() => setAbrirCamera(false)}
-        open={abrirCamera}
-        pegarFoto={adicionarFoto}
-      />
+      <VerPdf open={mostrarPdf} uri={urlPdf} setOpen={setMostrarPdf} />
       <View style={styles.container}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => setAbrirCamera(true)}>
-          <Text>abrir camera</Text>
+        <TouchableOpacity onPress={() => setMostrarPdf(true)}>
+          <Text>testar PDF</Text>
         </TouchableOpacity>
-        {fotos.length > 0 &&
-          fotos.map((f, index) => (
-            <Image key={String(index)} source={{uri: f}} style={styles.image} />
-          ))}
+        <TouchableOpacity onPress={() => navigation.navigate('TestarCamera')}>
+          <Text>testar Camera</Text>
+        </TouchableOpacity>
       </View>
     </>
   );
-};
-
-export default Home;
+}
