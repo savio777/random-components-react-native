@@ -1,14 +1,9 @@
 import React, {useState} from 'react';
 
-import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
+import {View, Text, TouchableOpacity, Image} from 'react-native';
 
-import Camera from '../components/Camera';
-
-const styles = StyleSheet.create({
-  container: {flex: 1, alignItems: 'center', justifyContent: 'center'},
-  button: {padding: 5, borderWidth: 1, borderColor: '#ccc', margin: 5},
-  image: {height: 100, width: 100},
-});
+import Camera from '../../components/Camera';
+import styles from './styles';
 
 const TestarCamera = () => {
   const [abrirCamera, setAbrirCamera] = useState(false);
