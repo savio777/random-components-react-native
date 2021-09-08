@@ -24,7 +24,9 @@ export default function Home() {
               onPress={() => setMostrarPdf(true)}
               style={styles.button}>
               <Icon name="file-pdf-box" style={styles.icon} />
-              <Text style={styles.textButton}>Testar PDF</Text>
+              <Text numberOfLines={2} style={styles.textButton}>
+                Testar PDF
+              </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.viewColumn}>
@@ -32,7 +34,9 @@ export default function Home() {
               onPress={() => navigation.navigate('TestarCamera')}
               style={styles.button}>
               <Icon name="camera" style={styles.icon} />
-              <Text style={styles.textButton}>Testar Camera</Text>
+              <Text numberOfLines={2} style={styles.textButton}>
+                Testar Camera
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -42,7 +46,19 @@ export default function Home() {
               onPress={() => navigation.navigate('TestarCalendario')}
               style={styles.button}>
               <Icon name="calendar-range" style={styles.icon} />
-              <Text style={styles.textButton}>Testar Calendário</Text>
+              <Text numberOfLines={2} style={styles.textButton}>
+                Testar Calendário
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.viewColumn}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('TestarGraficos')}
+              style={styles.button}>
+              <Icon name="chart-donut" style={styles.icon} />
+              <Text numberOfLines={2} style={styles.textButton}>
+                Testar Gráficos
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
