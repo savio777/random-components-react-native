@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+
 import {color} from '../../core/helper';
 
 const styles = StyleSheet.create({
@@ -11,8 +12,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: '60%',
     backgroundColor: '#fff',
-    padding: 10,
-    paddingTop: 40,
+    paddingHorizontal: 30,
+    paddingTop: 30,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
   },

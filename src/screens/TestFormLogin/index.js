@@ -22,15 +22,17 @@ const TestFormLogin = () => {
         <View style={styles.containerUser} />
         <View style={styles.containerForm}>
           <Input
+            nameIcon="email"
             value={email}
             onChangeText={setEmail}
-            placeholder="email"
+            placeholder="Enter your email"
             keyboardType="email-address"
           />
           <Input
+            nameIcon="lock"
             value={password}
             onChangeText={setPassword}
-            placeholder="senha"
+            placeholder="Enter your password"
             secureTextEntry
           />
         </View>
