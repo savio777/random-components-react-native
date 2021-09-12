@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import {View, StatusBar} from 'react-native';
+import Button from '../../components/Button';
 import Input from '../../components/Input';
 import {color} from '../../core/helper';
 
@@ -34,6 +35,11 @@ const TestFormLogin = () => {
             onChangeText={setPassword}
             placeholder="Enter your password"
             secureTextEntry
+          />
+          <Button
+            nameIcon="arrow-right"
+            text="LOGIN"
+            onPress={() => console.log(email, password)}
           />
         </View>
       </View>
