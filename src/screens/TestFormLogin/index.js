@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 
-import {View, StatusBar, Text} from 'react-native';
+import {View, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Button from '../../components/Button';
+import Header from '../../components/Header';
 import Input from '../../components/Input';
-import {color} from '../../core/helper';
 
 import styles from './styles';
 
@@ -22,7 +22,7 @@ const TestFormLogin = () => {
 
   return (
     <>
-      <StatusBar backgroundColor={color.purple} />
+      <Header back />
       <View style={styles.container}>
         <View style={styles.containerUser}>
           <View style={styles.userIcon}>
