@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 3,
     borderEndColor: color.manatee,
     borderBottomColor: color.manatee,
-    width: '65%',
+    width: '80%',
     alignItems: 'center',
   },
   textButton: {
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
   },
   icon: {color: color.dark, fontSize: 22},
   viewRow: {
+    marginVertical: 5,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
