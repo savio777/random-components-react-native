@@ -7,7 +7,20 @@ const styles = StyleSheet.create({
     backgroundColor: color.purpleLight,
     flex: 1,
   },
-  containerUser: {height: '40%'},
+  containerUser: {
+    height: '40%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  userIcon: {
+    width: 90,
+    height: 90,
+    borderRadius: 45,
+    backgroundColor: color.purple,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textUser: {color: '#fff', fontSize: 30, textAlign: 'center'},
   containerForm: {
     alignItems: 'center',
     height: '60%',
