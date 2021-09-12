@@ -62,6 +62,18 @@ export default function Home() {
             </TouchableOpacity>
           </View>
         </View>
+        <View style={styles.viewRow}>
+          <View style={styles.viewColumn}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('TestFormLogin')}
+              style={styles.button}>
+              <Icon name="account" style={styles.icon} />
+              <Text numberOfLines={2} style={styles.textButton}>
+                Teste Form Login
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
     </>
   );
