@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: color.purple,
     padding: 15,
     borderRadius: 20,
-    marginBottom: 15,
+    marginTop: 15,
     justifyContent: 'center',
     alignItems: 'center',
   },

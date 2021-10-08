@@ -9,10 +9,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderWidth: 2,
     borderRadius: 20,
-    marginBottom: 15,
+    marginTop: 15,
   },
   input: {
     width: '100%',
+  },
+  error: {
+    color: '#e31931',
+    textAlign: 'left',
+    width: '100%',
+    fontWeight: 'bold',
+    fontSize: 12,
   },
 });
 

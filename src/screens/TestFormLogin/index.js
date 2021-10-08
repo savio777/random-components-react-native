@@ -1,25 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 import {View, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Button from '../../components/Button';
+import FormLogin from '../../components/FormLogin';
 import Header from '../../components/Header';
-import Input from '../../components/Input';
 
 import styles from './styles';
 
 const TestFormLogin = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  useEffect(() => {
-    setEmail('');
-    setPassword('');
-  }, []);
-
-  const handleSubmit = () => console.log(email, password);
-
   return (
     <>
       <Header back />
@@ -31,21 +20,7 @@ const TestFormLogin = () => {
           <Text style={styles.textUser}>Login</Text>
         </View>
         <View style={styles.containerForm}>
-          <Input
-            nameIcon="email"
-            value={email}
-            onChangeText={setEmail}
-            placeholder="Enter your email"
-            keyboardType="email-address"
-          />
-          <Input
-            nameIcon="lock"
-            value={password}
-            onChangeText={setPassword}
-            placeholder="Enter your password"
-            secureTextEntry
-          />
-          <Button nameIcon="arrow-right" text="LOGIN" onPress={handleSubmit} />
+          <FormLogin />
         </View>
       </View>
     </>
